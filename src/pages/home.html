@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoBlog</title>
+    <link rel="stylesheet" href="../styles/css/style.css" />
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <a href="../pages/home.html" class="header__logo">AutoBlog</a>
+            <input type="checkbox" id="nav-toggle" class="header__checkbox" />
+            <label for="nav-toggle" class="header__toggle">
+                <span class="header__toggle-line">&nbsp;</span>
+            </label>
+            <ul class="header__menu">
+                <li class="header__menu-item">
+                    <a href="../pages/home.html" class="header__link">Inicio</a>
+                </li>
+                <li class="header__menu-item header__menu-item--has-submenu">
+                    <input type="checkbox" id="submenu-toggle" class="header__submenu-toggle" />
+                    <label for="submenu-toggle" class="header__link">Categorías</label>
+                    <ul class="header__submenu">
+                        <li>
+                            <a href="../pages/categorias/category-deportivos.html" class="header__sublink">Autos
+                                deportivos</a>
+                        </li>
+                        <li>
+                            <a href="../pages/categorias/category-carrera.html" class="header__sublink">Autos de
+                                carrera</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__menu-item">
+                    <a href="../pages/about.html" class="header__link">Acerca de</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero hero--home">
+            <div class="hero__image-container">
+                <img src="../assets/img/Hero-Home.jpg" alt="Imagen de héroe" class="hero__image" />
+            </div>
+            <div class="hero__content">
+                <h1 class="hero__title">Bienvenido a AutoBlog</h1>
+                <p class="hero__subtitle">
+                    Tu fuente para las últimas noticias y reseñas de autos
+                </p>
+            </div>
+        </section>
+        <section class="posts">
+            <h2 class="posts__title">Últimos Posts</h2>
+            <div class="posts__grid">
+                <article class="post-card">
+                    <div class="post-card__image-container">
+                        <img src="../assets/img/Ferrari-sf90.jpg" alt="Ferrari SF90 Stradale"
+                            class="post-card__image" />
+                    </div>
+                    <div class="post-card__content">
+                        <h3 class="post-card__title">
+                            <a href="../pages/posts/Ferrari-SF90.html">Ferrari SF90 Stradale: El híbrido más potente</a>
+                        </h3>
+                        <a href="../pages/categorias/category-deportivos.html" class="post-card__category">Autos
+                            deportivos</a>
+                        <p class="post-card__meta">
+                            Por Guillermo Solórzano | 12 de Junio, 2024
+                        </p>
+                        <p class="post-card__excerpt">
+                            Diseño aerodinámico refinado, motor V8 biturbo, y tecnología de
+                            vanguardia. El SF90 Stradale es una joya de ingeniería para los
+                            amantes de la velocidad.
+                        </p>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <div class="post-card__image-container">
+                        <img src="../assets/img/Porsche-911-GT3-RS.jpg" alt="Porsche 911 GT3 RS"
+                            class="post-card__image" />
+                    </div>
+                    <div class="post-card__content">
+                        <h3 class="post-card__title">
+                            <a href="../pages/posts/porsche-GT3.html">Porsche 911 GT3 RS: La perfección en pista</a>
+                        </h3>
+                        <a href="../pages/categorias/category-deportivos.html" class="post-card__category">Autos
+                            deportivos</a>
+                        <p class="post-card__meta">
+                            Por Guillermo Solórzano | 25 de Junio, 2024
+                        </p>
+                        <p class="post-card__excerpt">
+                            Motor bóxer atmosférico de 4.0 litros, aerodinámica avanzada y
+                            tecnología de punta. El GT3 RS es la culminación del rendimiento
+                            en pista de Porsche.
+                        </p>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <div class="post-card__image-container">
+                        <img src="../assets/img/McLaren-765LT.jpg" alt="McLaren 765LT" class="post-card__image" />
+                    </div>
+                    <div class="post-card__content">
+                        <h3 class="post-card__title">
+                            <a href="../pages/posts/McLaren-765lt.html">McLaren 765LT: Ligereza y potencia</a>
+                        </h3>
+                        <a href="../pages/categorias/category-deportivos.html" class="post-card__category">Autos
+                            deportivos</a>
+                        <p class="post-card__meta">
+                            Por Guillermo Solórzano | 1 de Julio, 2024
+                        </p>
+                        <p class="post-card__excerpt">
+                            Motor V8 biturbo de 4.0 litros, diseño aerodinámico agresivo y
+                            tecnología de vanguardia. El 765LT lleva al límite la filosofía
+                            de ligereza de McLaren.
+                        </p>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <div class="post-card__image-container">
+                        <img src="../assets/img/Aston-Martin-Vantage.jpg" alt="Aston Martin Vantage"
+                            class="post-card__image" />
+                    </div>
+                    <div class="post-card__content">
+                        <h3 class="post-card__title">
+                            <a href="../pages/posts/Aston-Martin-Vantage.html">Aston Martin Vantage: Elegancia
+                                británica</a>
+                        </h3>
+                        <a href="../pages/categorias/category-deportivos.html" class="post-card__category">Autos
+                            deportivos</a>
+                        <p class="post-card__meta">
+                            Por Guillermo Solórzano | 5 de Julio, 2024
+                        </p>
+                        <p class="post-card__excerpt">
+                            Motor V8 biturbo de 4.0 litros, diseño elegante y tecnología
+                            avanzada. El Vantage es la perfecta combinación de rendimiento y
+                            lujo británico.
+                        </p>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <div class="post-card__image-container">
+                        <img src="../assets/img/Mercedes-W15.jpg" alt="Mercedes W15 F1" class="post-card__image" />
+                    </div>
+                    <div class="post-card__content">
+                        <h3 class="post-card__title">
+                            <a href="../pages/posts/Mercedes-W15.html">Mercedes W15: La evolución del Flecha de
+                                Plata</a>
+                        </h3>
+                        <a href="../pages/categorias/category-carrera.html" class="post-card__category">Autos de
+                            carrera</a>
+                        <p class="post-card__meta">
+                            Por Guillermo Solórzano | 10 de Julio, 2024
+                        </p>
+                        <p class="post-card__excerpt">
+                            Motor híbrido de última generación, diseño aerodinámico refinado
+                            y tecnología de punta. El W15 representa la evolución del
+                            dominio de Mercedes en la F1.
+                        </p>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <div class="post-card__image-container">
+                        <img src="../assets/img/Toyota-GR-Rally1.jpg" alt="Toyota GR Yaris Rally1"
+                            class="post-card__image" />
+                    </div>
+                    <div class="post-card__content">
+                        <h3 class="post-card__title">
+                            <a href="../pages/posts/Toyota-GR-Yaris-Rally1.html">Toyota GR Yaris Rally1: Dominando el
+                                WRC</a>
+                        </h3>
+                        <a href="../pages/categorias/category-carrera.html" class="post-card__category">Autos de
+                            carrera</a>
+                        <p class="post-card__meta">
+                            Por Guillermo Solórzano | 15 de Julio, 2024
+                        </p>
+                        <p class="post-card__excerpt">
+                            Motor de 1.6 litros turboalimentado, diseño aerodinámico
+                            agresivo y tecnología de rally avanzada. El GR Yaris Rally1
+                            domina los terrenos más desafiantes del WRC.
+                        </p>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <div class="post-card__image-container">
+                        <img src="../assets/img/Porsche-963-LMDh.jpg" alt="Porsche 963 LMDh" class="post-card__image" />
+                    </div>
+                    <div class="post-card__content">
+                        <h3 class="post-card__title">
+                            <a href="../pages/posts/Porsche-963-LMDh.html">Porsche 963 LMDh: El retorno a Le Mans</a>
+                        </h3>
+                        <a href="../pages/categorias/category-carrera.html" class="post-card__category">Autos de
+                            carrera</a>
+                        <p class="post-card__meta">
+                            Por Guillermo Solórzano | 20 de Julio, 2024
+                        </p>
+                        <p class="post-card__excerpt">
+                            Prototipo de última generación con tecnología híbrida y
+                            aerodinámica avanzada. El 963 LMDh marca el regreso triunfal de
+                            Porsche a la élite de la resistencia.
+                        </p>
+                    </div>
+                </article>
+                <article class="post-card">
+                    <div class="post-card__image-container">
+                        <img src="../assets/img/Dallara-IR18.jpg" alt="Dallara IR18 IndyCar" class="post-card__image" />
+                    </div>
+                    <div class="post-card__content">
+                        <h3 class="post-card__title">
+                            <a href="../pages/posts/Dallara-IR18.html">Dallara IR18: El corazón de la IndyCar</a>
+                        </h3>
+                        <a href="../pages/categorias/category-carrera.html" class="post-card__category">Autos de
+                            carrera</a>
+                        <p class="post-card__meta">
+                            Por Guillermo Solórzano | 25 de Julio, 2024
+                        </p>
+                        <p class="post-card__excerpt">
+                            Chasis de vanguardia, aerodinámica refinada y seguridad
+                            avanzada. El Dallara IR18 es la base de la emocionante
+                            competición en la serie IndyCar.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 AutoBlog. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

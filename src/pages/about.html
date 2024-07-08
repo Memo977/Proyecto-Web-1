@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - AutoBlog</title>
+    <link rel="stylesheet" href="/src/styles/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <a href="../pages/home.html" class="header__logo">AutoBlog</a>
+            <input type="checkbox" id="nav-toggle" class="header__checkbox">
+            <label for="nav-toggle" class="header__toggle">
+                <span class="header__toggle-line">&nbsp;</span>
+            </label>
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="../pages/home.html" class="header__link">Inicio</a></li>
+                <li class="header__menu-item header__menu-item--has-submenu">
+                    <input type="checkbox" id="submenu-toggle" class="header__submenu-toggle">
+                    <label for="submenu-toggle" class="header__link">Categorías</label>
+                    <ul class="header__submenu">
+                        <li><a href="../pages/categorias/category-deportivos.html" class="header__sublink">Autos deportivos</a></li>
+                        <li><a href="../pages/categorias/category-carrera.html" class="header__sublink">Autos de carrera</a></li>
+                    </ul>
+                </li>
+                <li class="header__menu-item"><a href="../pages/about.html" class="header__link">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero hero--about">
+            <div class="hero__image-container">
+                <img src="/src/assets/img/Hero-About.jpg" alt="Imagen de héroe" class="hero__image">
+            </div>
+            <div class="hero__content">
+                <h1 class="hero__title">Acerca de AutoBlog</h1>
+                <p class="hero__subtitle">Descubre nuestra pasión por los autos</p>
+            </div>
+        </section>
+      <section class="about">
+    <div class="about__content">
+        <h2 class="about__title">Autor del Blog</h2>
+        <div class="about__author">
+            <img src="/src/assets/img/autor.jpg" alt="Guillermo Solórzano Ochoa" class="about__author-image">
+            <div class="about__author-info">
+                <h3 class="about__author-name">Guillermo Solórzano Ochoa</h3>
+                <p class="about__author-role">Fundador y Editor de AutoBlog</p>
+                <p class="about__text">Soy un estudiante de Ingeniería de Software, apasionado del mundo automotriz. Fundé AutoBlog en 2024 como proyecto de clase para compartir mi conocimiento y pasión por los autos deportivos y de carrera.</p>
+                <div class="about__social-links">
+                    <a href="https://github.com/yourusername" target="_blank" class="about__social-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.facebook.com/guillermo.ochoa.50/" target="_blank" class="about__social-link">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/memoochoa97/" target="_blank" class="about__social-link">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+        <h2 class="about__title">Sobre AutoBlog</h2>
+        <p class="about__text">AutoBlog es tu fuente confiable de noticias, reseñas y análisis sobre autos deportivos y de carrera. Nos enfocamos en proporcionar contenido de alta calidad, actualizado y relevante para entusiastas y profesionales del mundo automotriz.</p>
+        <h2 class="about__title">Sitios Similares</h2>
+        <ul class="about__similar-sites">
+            <li><a href="https://www.autoblog.com/" target="_blank">Autoblog.com</a> - Noticias y reseñas de autos</li>
+            <li><a href="https://www.motortrend.com/" target="_blank">MotorTrend</a> - Revista y sitio web de automovilismo</li>
+            <li><a href="https://www.caranddriver.com/" target="_blank">Car and Driver</a> - Revista especializada en autos</li>
+            <li><a href="https://www.topgear.com/" target="_blank">Top Gear</a> - Sitio web del famoso programa de TV</li>
+        </ul>
+    </div>
+</section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 AutoBlog. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

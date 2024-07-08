@@ -1,0 +1,274 @@
+// Estilos para el encabezado y la navegación
+.header {
+    background-color: $primary-color;
+    color: $text-color;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  
+    // Estilos para la barra de navegación
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      position: relative;
+    }
+  
+    // Estilos para el logo
+    &__logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $accent-color;
+      z-index: 110;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: lighten($accent-color, 10%);
+        text-decoration: none;
+      }
+    }
+  
+    // Ocultar checkbox del menú
+    &__checkbox {
+      display: none;
+    }
+  
+    // Estilos para el botón de toggle del menú móvil
+    &__toggle {
+      display: block;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      z-index: 110;
+  
+      &-line,
+      &-line::before,
+      &-line::after {
+        display: block;
+        background-color: $dark-accent-color;
+        height: 3px;
+        width: 100%;
+        border-radius: 2px;
+        transition: all 0.3s;
+        position: absolute;
+      }
+  
+      &-line {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+  
+      &-line::before {
+        content: '';
+        top: -8px;
+      }
+  
+      &-line::after {
+        content: '';
+        top: 8px;
+      }
+    }
+  
+    // Estilos para el botón de toggle cuando está activo
+    &__checkbox:checked + .header__toggle {
+      .header__toggle-line {
+        background-color: transparent;
+      }
+  
+      .header__toggle-line::before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+  
+      .header__toggle-line::after {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+    }
+  
+    // Estilos para el menú
+    &__menu {
+      display: block;
+      list-style-type: none;
+      padding: 4rem 0 0;
+      margin: 0;
+      flex-direction: column;
+      width: 80%;
+      max-width: 400px;
+      background-color: $primary-color;
+      color: $text-color;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      z-index: 105;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    // Fondo oscuro detrás del menú móvil
+    &__menu-backdrop {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 104;
+    }
+  
+    // Mostrar fondo oscuro cuando el menú está activo
+    &__checkbox:checked ~ .header__menu-backdrop {
+      display: block;
+    }
+  
+    // Mostrar menú cuando está activo
+    &__checkbox:checked ~ .header__menu {
+      transform: translateX(0);
+    }
+  
+    // Estilos para los elementos del menú
+    &__menu-item {
+      position: relative;
+      border-bottom: 1px solid #333;
+      margin: 0;
+    }
+  
+    &__menu-item:last-child {
+      border-bottom: none;
+    }
+  
+    // Estilos para pantallas más grandes
+    @include mobile-first(768px) {
+      &__toggle {
+        display: none;
+      }
+  
+      &__menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: auto;
+        position: static;
+        background-color: transparent;
+        height: auto;
+        padding-top: 0;
+        transform: none;
+  
+        &-item {
+          border: none;
+          margin: 0 1rem;
+        }
+      }
+  
+      &__menu-backdrop {
+        display: none !important;
+      }
+    }
+  
+    // Estilos para los enlaces del menú
+    &__link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      color: $text-color;
+      text-align: left;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 0.9rem;
+  
+      &:hover {
+        color: $accent-color;
+        text-decoration: none;
+      }
+  
+      @include mobile-first(768px) {
+        padding: 0;
+      }
+    }
+  
+    // Ocultar toggle del submenú
+    &__submenu-toggle {
+      display: none;
+    }
+  
+    // Estilos para elementos con submenú
+    &__menu-item--has-submenu {
+      .header__link::after {
+        content: '▼';
+        font-size: 0.8rem;
+        margin-left: 0.5rem;
+      }
+  
+      @media (max-width: 767px) {
+        .header__submenu {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+        }
+  
+        .header__submenu-toggle:checked ~ .header__submenu {
+          max-height: 500px;
+          transition: max-height 0.5s ease-in;
+        }
+      }
+    }
+  
+    // Estilos para submenús
+    &__submenu {
+      @media (max-width: 767px) {
+        position: static;
+        transform: none;
+        background-color: darken($primary-color, 5%);
+        box-shadow: none;
+        width: 100%;
+      }
+  
+      @include mobile-first(768px) {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $primary-color;
+        padding: 0.5rem;
+        list-style-type: none;
+        min-width: 0;
+        width: max-content;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        border-top: none;
+      }
+    }
+  
+    // Estilos para enlaces del submenú
+    &__sublink {
+      color: $text-color;
+      display: block;
+      padding: 0.5rem;
+      white-space: nowrap;
+      
+      &:hover {
+        background-color: darken($primary-color, 5%);
+        color: $accent-color;
+        text-decoration: none
+      }
+  
+      @media (max-width: 767px) {
+        padding: 0.5rem 1rem 0.5rem 2rem;
+      }
+    }
+  
+    // Mostrar submenú al hacer hover en pantallas grandes
+    @include mobile-first(768px) {
+      &__menu-item--has-submenu:hover .header__submenu {
+        display: block;
+      }
+    }
+  }
